@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de información</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <h1>Registro de información</h1>
+            <p>Guarda y consulta tus registros.</p>
+        </header>
+
+        <section class="form-section">
+            <h2>Crear un registro</h2>
+
+            <form id="recordForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Escribe tu nombre"
+                        maxlength="120"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <textarea
+                        id="descripcion"
+                        name="descripcion"
+                        placeholder="Escribe aquí la descripción"
+                        rows="5"
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit" id="submitButton">
+                    Guardar registro
+                </button>
+
+                <p id="formMessage" role="status"></p>
+            </form>
+        </section>
+
+        <section class="records-section">
+            <h2>Registros guardados</h2>
+            <p id="apiStatus">Conectando con el servidor...</p>
+            <div id="recordsList">
+                <p>Cargando registros...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
